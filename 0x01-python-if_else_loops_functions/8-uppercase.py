@@ -5,4 +5,7 @@ def uppercase(str):
         res = ord(str[i])
         if res >= 97:
             res -= 32
-        print("{res:c}".format(res=res), end=" ")
+        if i == len(str) - 1:
+            print("{res:c} ".format(res=res))
+        else:
+            print("{res:c}".format(res=res), end="")
