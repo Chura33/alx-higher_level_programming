@@ -6,4 +6,3 @@ def uppercase(str):
         if res >= 97:
             res -= 32
         print("{res:c}".format(res=res), end="")
-    print("\n")
