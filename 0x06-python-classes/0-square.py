@@ -1,3 +1,4 @@
 #!/usr/bin/python3
+'''defines a comment'''
 class Square:
-    pass
+    pass #  does nothing
