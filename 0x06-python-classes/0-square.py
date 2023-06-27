@@ -5,7 +5,7 @@
 
 
 class Square():
-
+    def __init__(self):
     """Represent a square."""
 
     pass
