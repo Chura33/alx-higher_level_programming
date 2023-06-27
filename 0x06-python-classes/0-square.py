@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
-class Square:
-    """
-    A class representing a square.
+"""Define a class Square."""
 
-    This class does not have any specific functionality.
 
-    """
+
+class Square():
+
+    """Represent a square."""
+
     pass
