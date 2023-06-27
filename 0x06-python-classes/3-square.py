@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-class Square:
+class Square():
     """
     A square class with a private object attribute.
     Checks the type of the argument and raises an exception on error
