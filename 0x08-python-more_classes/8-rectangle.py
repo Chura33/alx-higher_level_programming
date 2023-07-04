@@ -87,6 +87,7 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect1, rect2):
         """Returns the rectangle with larger area
+
             Args:
             rect_1 (Rectangle): The first Rectangle.
             rect_2 (Rectangle): The second Rectangle.
