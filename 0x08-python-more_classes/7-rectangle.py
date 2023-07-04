@@ -7,7 +7,7 @@ class Rectangle:
 
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
-	print_symbol: the symbol used for printing rectangles
+        print_symbol: the symbol used for printing rectangles
     """
 
     number_of_instances = 0
