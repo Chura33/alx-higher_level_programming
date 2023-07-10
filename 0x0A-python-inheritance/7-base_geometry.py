@@ -3,6 +3,9 @@
 
 
 class BaseGemoetry:
+    """ class with public instance methods"""
+
+
     def area(self):
         """This method simply raises an exception"""
 
