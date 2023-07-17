@@ -1,25 +1,24 @@
 #!/usr/bin/python3
-""" this module inherits from the rectangle class"""
-
+"""Defines a square class."""
 from models.rectangle import Rectangle
 
 
-class Square(rectangle):
-    """This module inherits from the rectangle class"""
+class Square(Rectangle):
+    """Represent a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """ this creates a new square
-            Arguments:
-                size(int) - the size of the square
-                x(int)- x coord of the new square
-                y(int) - y coord of the new square
-                id(int) - the id of the square
+        """Initialize a new Square.
+        Args:
+            size (int): The size of the new Square.
+            x (int): The x coord of the new Square.
+            y (int): The y coord of the new Square.
+            id (int): The id of the new Square.
         """
-        super.__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """set the size of the square"""
+        """Get/set the size of the Square."""
         return self.width
 
     @size.setter
@@ -31,10 +30,10 @@ class Square(rectangle):
         """Update the Square.
         Args:
             *args (ints): New attribute values.
-                - 1st argument represents id attribute
-                - 2nd argument represents size attribute
-                - 3rd argument represents x attribute
-                - 4th argument represents y attribute
+                - 1st arg represents id attribute
+                - 2nd arg represents size attribute
+                - 3rd arg represents x attribute
+                - 4th arg represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
