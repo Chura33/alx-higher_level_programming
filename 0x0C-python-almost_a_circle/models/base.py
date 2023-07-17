@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" defines a base model class"""
+"""Defines a base model class."""
 import json
 import csv
 import turtle
@@ -27,10 +27,10 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    def _to_json_string(list_dictionaries):
-        """ return the json of a list of dicts
-            Arguments:
-                list_dictionaries(list): A list of dictionaries
+    def to_json_string(list_dictionaries):
+        """Return the JSON serialization of a list of dicts.
+        Args:
+            list_dictionaries (list): A list of dictionaries.
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
