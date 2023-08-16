@@ -5,5 +5,5 @@
 -- the number of records for this score with the label number
 
 SELECT score, COUNT(*) as number FROM second_table 
-GROUP BY score ORDER by number DESC
+GROUP BY score ORDER by number DESC;
 
