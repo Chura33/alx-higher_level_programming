@@ -1,0 +1,18 @@
+{
+  "name": "0x12-javascript-warm_up",
+  "version": "1.0.0",
+  "description": "0x12. JavaScript - Warm up",
+  "main": "",
+  "scripts": {
+    "semi:test": "semistandard  *.js",
+    "semi:fix": "semistandard --fix *.js",
+    "standard:fix": "standard --fix *.js",
+    "fix": "semistandard --fix *.js || standard --fix *.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "semistandard": "^17.0.0",
+    "standard": "^17.1.0"
+  }
+}
