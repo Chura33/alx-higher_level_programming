@@ -2,9 +2,9 @@
 
 exports.esrever = function (list) {
   const length = list.length;
-  let newList = [];
-  for (let i in list) {
+  const newList = [];
+  for (const i in list) {
     newList[i] = list[length - i - 1];
   }
   return (newList);
-}
+};
