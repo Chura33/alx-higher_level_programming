@@ -1,10 +1,24 @@
 #!/usr/bin/env python3
 
+
+
+
 import MySQLdb
 import sys
 
 
 def list_states(username, password, database_name):
+    """
+    List all states from the specified MySQL database.
+
+    Args:
+        username (str): MySQL username.
+        password (str): MySQL password.
+        database_name (str): Name of the database to connect to.
+
+    Returns:
+        None
+    """
     try:
         # Connect to the MySQL server
         connection = MySQLdb.connect(
