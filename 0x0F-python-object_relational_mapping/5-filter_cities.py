@@ -44,8 +44,8 @@ def list_states(username, password, database_name, searched):
         cursor = connection.cursor()
         # Execute the SQL query to fetch all states sorted by states.id
         cursor.execute("SELECT * FROM states "
-                       "WHERE name LIKE BINARY '{}' "
-                       "ORDER BY id ASC".format(searched))
+                       "WHERE name = %s "
+                       "ORDER BY id ASC", (searched, ))
 
         # Fetch all the rows
         rows = cursor.fetchall()
