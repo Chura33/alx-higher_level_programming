@@ -46,16 +46,17 @@ def list_states(username, password, database_name, searched):
         cursor.execute("SELECT cities.name FROM "
                        "cities INNER JOIN states "
                        "ON cities.state_id = states.id "
-                       "WHERE states.name LIKE BINARY %s "
+                       "WHERE states.name = %s "
                        "ORDER BY cities.id ASC ", (searched, ))
 
         # Fetch all the rows
         rows = cursor.fetchall()
 
         # Print the results
+        city_names = []
         for row in rows:
-            city_names = [row[0] for row in rows]
-            print(', '.join(city_names))
+            city_names.append(row[0])
+        print(', '.join(city_names))
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
     finally:
