@@ -45,7 +45,7 @@ def list_states(username, password, database_name, searched):
         # Execute the SQL query to fetch all states sorted by states.id
         cursor.execute("SELECT * FROM states "
                        "WHERE name = '{}' "
-                       "ORDER BY id ASC ".format(searched))
+                       "ORDER BY id ASC".format(searched))
 
         # Fetch all the rows
         rows = cursor.fetchall()
