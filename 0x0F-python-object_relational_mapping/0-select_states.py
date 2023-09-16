@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and lists all states from a specified database.
-It takes three arguments: MySQL username, MySQL password, and database name.
+This script connects to a MySQL database
+and lists all states from a specified database.
+It takes three arguments: MySQL username,
+MySQL password, and database name.
 Results are sorted in ascending order by states.id.
 
 Usage:
@@ -25,7 +27,6 @@ def list_states(username, password, database_name):
     Returns:
         None
     """
-
 
     try:
         # Connect to the MySQL server
