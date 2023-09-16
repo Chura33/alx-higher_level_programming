@@ -44,7 +44,7 @@ def list_states(username, password, database_name):
         cursor = connection.cursor()
 
         # Execute the SQL query to fetch all states sorted by states.id
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
         # Fetch all the rows
         rows = cursor.fetchall()
