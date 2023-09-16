@@ -43,17 +43,19 @@ def list_states(username, password, database_name, searched):
         # Create a cursor object to interact with the database
         cursor = connection.cursor()
         # Execute the SQL query to fetch all states sorted by states.id
-        cursor.execute("SELECT * FROM states "
-                       "WHERE name = %s "
-                       "ORDER BY id ASC", (searched, ))
+        cursor.execute("SELECT cities.name FROM "
+                       "cities INNER JOIN states "
+                       "ON cities.state_id = states.id "
+                       "WHERE states.name LIKE BINARY %s "
+                       "ORDER BY cities.id ASC ", (searched, ))
 
         # Fetch all the rows
         rows = cursor.fetchall()
 
         # Print the results
         for row in rows:
-            print(row)
-
+            city_names = [row[0] for row in rows]
+            print(', '.join(city_names))
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
     finally:
