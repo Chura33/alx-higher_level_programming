@@ -11,11 +11,4 @@ import sys
 
 if __name__ == "__main__":
     response = requests.get(sys.argv[1])
-    if response.status_code == 200:
-        if 'X-Request-Id' in response.headers:
-            request_id = response.headers.get("X-Request-Id")
-            print(request_id)
-        else:
-            print("id not found")
-    else:
-        print("error occurred")
+    print(response.get('X-Request-Id'))
