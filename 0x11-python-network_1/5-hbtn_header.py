@@ -14,7 +14,7 @@ if __name__ == "__main__":
     if response.status_code == 200:
         if 'X-Request-Id' in response.headers:
             request_id = response.headers.get("X-Request-Id")
-            print("X-Request-Id:", request_id)
+            print(request_id)
         else:
             print("id not found")
     else:
