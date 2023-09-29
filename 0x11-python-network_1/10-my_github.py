@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """This script accesses my github and prints my id"""
 import requests
+from requests.auth import HTTPBasicAuth
 import sys
 
-if  __name__ == "__main__":
-    url = "https://{}@github.com/{}".format(sys.argv[1], sys.argv[2])
-    print(url)
-    response = requests.get(url)
+if __name__ == "__main__":
+    authent = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    url = "https://api.github.com/user"
+    response = requests.get(url, auth=authent)
     try:
         if response:
-            print(response.get('id'))
+            print(response.json().get('id'))
         else:
             print(None)
-    except ValueError:
-        print("Not a valid JSON")
+    except ValueError as e:
+        print(e)
