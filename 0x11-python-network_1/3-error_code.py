@@ -9,8 +9,8 @@ import urllib.error
 import sys
 
 # Get the URL from the command-line argument
-url = sys.argv[1]
 if __name__ == "__main__":
+    url = sys.argv[1]
     try:
         with urllib.request.urlopen(url) as response:
             # Check if the response is an HTTP error
