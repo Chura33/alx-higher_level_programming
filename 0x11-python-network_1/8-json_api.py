@@ -8,11 +8,12 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    letter = sys.argv[1]
-    if not letter:
+    if len(sys.argv) < 2:
         letter = ""
-    q = letter
-    response = requests.post(url, data=q)
+    else:
+        letter = sys.argv[1]
+    data = {'q': letter}
+    response = requests.post(url, data=data)
     try:
         json_response = response.json()
         if json_response:
