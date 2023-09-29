@@ -11,12 +11,13 @@ if __name__ == "__main__":
     letter = sys.argv[1]
     if not letter:
         letter = ""
-    data = {'q': letter}
-    response = requests.post(url, data=data)
-    json_response = response.json()
-    if response.json():
-        print('[{}] {}'.format(json_response.get('id'), json_response.get('name')))
-    elif not response.json():
-        print('No result')
-    else:
+    q = letter
+    response = requests.post(url, data=q)
+    try:
+        json_response = response.json()
+        if json_response:
+            print('[{}] {}'.format(json_response['id'], json_response['name']))
+        else:
+            print('No result')
+    except ValueError:
         print("Not a valid JSON")
