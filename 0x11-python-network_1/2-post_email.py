@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
+=======
+"""This module makes a post request
+to the given email"""
+>>>>>>> 84eba66b01c133761453f09680095399be9e946a
 import urllib.request
 import urllib.parse
 import sys
